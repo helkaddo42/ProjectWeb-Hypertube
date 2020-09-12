@@ -1,0 +1,19 @@
+/* Landing */
+
+.BgPicture{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../../Picture/Streaming-Movie.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  min-height: 100vh;
+}
+.BgPicture img{
+ /* flex-basis: 50px; */
+ height: 200px;
+ width: 200px;
+}

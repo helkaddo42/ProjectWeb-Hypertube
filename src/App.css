@@ -1,0 +1,58 @@
+:root {
+  --white-color: #ffffff;
+  --light-grey-color: #EAE8E8;
+  --light-green-color: #1ecc78;
+  --green-color: #0cb765;
+  --red-color: #EB1D27;
+  --blue-color: #4f78a4;
+  --dark-red-color: #d31017;
+  --dark-grey-color: #363636;
+  --black-color: #333030;
+  --deep-black-color: #000000;
+}
+/* Google font */
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Peta&display=swap');
+
+
+
+/* HEADER  */
+header{
+  display: flex;
+  justify-content: center;
+  background-color: var(--deep-black-color) ;
+
+}
+.title a{
+  flex-basis: 80px;
+  color: white;
+  font-family: 'Lexend Peta', sans-serif;
+}
+.title a{
+  text-decoration:none;
+}
+
+/* Footer  */
+
+/* footer */
+
+/*  Google font */
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Peta&display=swap");
+/* 
+footer{
+  display: flex;
+  justify-content: center;
+  background-color: var(--deep-black-color) ;
+
+}
+
+.title_footer{
+  flex-basis: auto;
+  color: white;
+  font-family: 'Lexend Peta', sans-serif;
+}
+.title_footer p{  
+  line-height: 19px;
+  margin: 10px 0;
+  padding: 0;
+  font-size: 12px;
+} */
