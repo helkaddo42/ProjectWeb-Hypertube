@@ -1,11 +1,12 @@
 import React from 'react'
-import '../../App.css'
+import {NavLink} from 'react-router-dom'
+import  './header.css'
 
 function Header() {
     return (
             <header >
                 <div className='title'>
-                    <h2> <a href='/'> Hypertube </a> </h2>
+                    <NavLink to='/Register'> <h2> Hypertube </h2></NavLink>
                 </div> 
             </header>
             

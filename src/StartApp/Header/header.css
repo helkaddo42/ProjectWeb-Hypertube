@@ -17,16 +17,19 @@
 
  /* HEADER  */
 header{
-    display: flex;
-    justify-content: center;
+   
+    height: 50px;
     background-color: var(--deep-black-color) ;
 
 }
-.title a{
+.title h2{
+    display: flex;
+    justify-content: center;
     flex-basis: 80px;
     color: white;
     font-family: 'Lexend Peta', sans-serif;
 }
-.title a{
-    text-decoration:none;
+.title a:hover,
+.title a:active{
+    text-decoration: none;
 }

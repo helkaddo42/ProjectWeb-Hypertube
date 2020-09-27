@@ -19,27 +19,35 @@
     justify-content: center;
     height: 100vh;
 }
+
 .container{
     display: flex;
-    flex: 0 1 95%;
+    flex: 0 1 90%;
 }
+
 .form_left{
     background-image: url(../../Picture/avatar.jpg);
-    background-size: cover;
+    background-size: contain;
     background-position: center top;
     background-repeat: no-repeat;
-    flex: 0 1 50%;;
-    padding: 100px;
+    flex: 0 1 60%;;
+    padding: 200px;
 }
+
 .form_right{
     display: flex;
     flex-direction: column;
     align-items:center;
     justify-content: center;
-    flex: 0 1 50%;
-
-
+    flex: 0 1 40%;
 }
+
+.userSign img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+}
+
 .form_input{
     display: flex;
     flex-direction: column;
@@ -48,6 +56,7 @@
     width: 500px;
     height: 500px;
     box-sizing: border-box;
+    flex-wrap: wrap;
 }
 
 .form_input .inputBox label{
@@ -60,18 +69,22 @@
 .form_input .inputBox input{
     width: 400px;
     color: var(--blue-color);
-    text-transform: uppercase;
     font-size: 20px;
     font-weight: bold;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     border: none;
     background: transparent;
     border-bottom: 1px solid var(--blue-color);
     outline: none;
     cursor: pointer;
-    padding-top: 10px;
+    padding-top: 5px;
+    padding-bottom: 0;
 }
-button{
+.form_input .inputBox p{
+    margin: 0;
+}
+
+.submit{
     font-size: 15px;
     border-radius: 5px;
     padding: 10px;
@@ -80,7 +93,7 @@ button{
 
 }
    
-button:hover{
+.submit:hover{
     background-color: var(--red-color);
     color: var(--white-color);
     cursor: pointer;
@@ -101,13 +114,44 @@ button:hover{
     color: var(--red-color);
   }
 
-
+::placeholder{
+    font-size: small;
+    font-style: italic;
+    color: var(--blue-color);
+}
 @media screen and (max-width: 1195px){
-    .form_left{
-        display: none;
-    }
-    .form_right,
-    .container {
-        flex: 0 1 100%;
-    } 
-}  
+        .container {
+         flex: 0 1 100%;
+        } 
+        .form_left{
+            display: none;
+        }
+        .form_right{
+            width: auto;
+            height: auto;
+            flex: 0 1 100%;
+        } 
+        .form_input{
+            width: 280px;
+        }
+        .form_input .inputBox{
+            width: 280px;
+        }
+        .form_input .inputBox label {
+            margin-bottom: 0;
+            font-family: 'Lexend Peta', sans-serif;
+
+        }
+        .form_input .inputBox input {
+            margin: 0 0;
+            width: 280px;
+        }
+        
+        .signUp_form{
+            box-shadow: none
+        }
+        .linkContainer {
+            margin-top: 0;
+            padding-top: 0;
+        }
+}

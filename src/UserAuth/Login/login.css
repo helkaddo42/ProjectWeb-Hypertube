@@ -39,7 +39,11 @@
     justify-content: center;
     flex: 0 1 50%;
 }
-
+.returnSignIn img{
+        height: 80px;
+        width: 80px;
+        border-radius: 20px;
+}
 .form_input1{
     display: flex;
     flex-direction: column;
@@ -48,6 +52,7 @@
     width: 500px;
     height: 500px;
     box-sizing: border-box;
+    flex-wrap: wrap;
 }
 
 .form_input1 .inputBox1 label{
@@ -60,7 +65,6 @@
 .form_input1 .inputBox1 input{
     width: 400px;
     color: var(--blue-color);
-    text-transform: uppercase;
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 30px;
@@ -71,7 +75,7 @@
     cursor: pointer;
     padding-top: 10px;
 }
-button{
+.finish{
     font-size: 15px;
     border-radius: 5px;
     padding: 10px;
@@ -80,7 +84,7 @@ button{
 
 }
    
-button:hover{
+.finish:hover{
     background-color: var(--red-color);
     color: var(--white-color);
     cursor: pointer;
@@ -101,13 +105,36 @@ button:hover{
   .simpleLink1:hover {
     color: var(--red-color);
   }
-
+::placeholder{
+    font-size: small;
+    font-style: italic;
+    color: var(--blue-color);
+}
 @media screen and (max-width: 1195px){
-    .form_left1{
-        display: none;
-    }
-    .form_right1,
     .container1 {
         flex: 0 1 100%;
     } 
-}  
+    .form_left1{
+        display: none;
+    }
+    .form_right1{
+        width: auto;
+        height: auto;
+        flex: 0 1 100%;
+    } 
+    .form_input1{
+        width: 280px;
+    }
+   
+    .form_input1 .inputBox1{
+        width: 280px;
+    }
+    .form_input1 .inputBox1 input {
+        width: 280px;
+    }
+    
+    .signIn_form1{
+        box-shadow: none
+       
+    }
+} 

@@ -25,5 +25,7 @@
 .sideBar a:hover,
 .sideBar a:active{
     color: #fa923f;
+    text-decoration: none;
+
 
 }

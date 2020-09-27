@@ -1,0 +1,88 @@
+:root {
+  --white-color: #ffffff;
+  --light-grey-color: #EAE8E8;
+  --light-green-color: #1ecc78;
+  --green-color: #0cb765;
+  --red-color: #EB1D27;
+  --blue-color: #4f78a4;
+  --dark-red-color: #d31017;
+  --dark-grey-color: #363636;
+  --black-color: #333030;
+  --deep-black-color: #000000;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Peta&display=swap');
+
+
+.errorPage {
+  box-shadow: inset 0px 143px 108px -18px rgba(0, 0, 0, 0.89);
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  background-color:var(--dark-grey-color);
+  }
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 1 80%;
+}
+
+.titre h2{
+    text-align: center;
+    font-family: 'Lexend Peta', sans-serif;
+    color: #EAE8E8;
+    flex-wrap: wrap;
+}
+
+.Img{
+  background-image: url(../Picture/hulk.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 3%;
+  width: 100%;
+  flex-basis: 80%;
+  border-radius: 100px;
+
+}
+.Btn{
+  padding-top: 3%;
+  display: flex;
+  width: 50%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.btnLeft{
+  width: 100%;
+  font-size: 15px;
+  border-radius: 50px;
+  padding: 10px;
+  background-color: var(--blue-color);
+  color: var(--light-grey-color) ;
+}
+
+.btnRight{
+  width: 100%;
+  font-size: 15px;
+  border-radius: 50px;
+  padding: 10px;
+  background-color: var(--dark-red-color);
+  color: var(--light-grey-color) ;
+  ;
+}
+
+.btnLeft:hover{
+  background-color: var(--light-grey-color);
+  color: var(--dark-red-colo);
+  cursor: pointer;
+}
+
+.btnRight:hover{
+  background-color: var(--light-grey-color);
+  color: var(--dark-red-colo);
+  cursor: pointer;
+}

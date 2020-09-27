@@ -1,5 +1,5 @@
 /* footer */
-
+ 
 :root {
     --white-color: #ffffff;
     --light-grey-color: #EAE8E8;
@@ -12,13 +12,15 @@
     --black-color: #333030;
     --deep-black-color: #000000;
   }
-/*  Google font */
+
+  /*  Google font */
   @import url("https://fonts.googleapis.com/css2?family=Lexend+Peta&display=swap");
 
 footer{
     display: flex;
     justify-content: center;
     background-color: var(--deep-black-color) ;
+    height: 50px;
 
   }
 
@@ -28,8 +30,8 @@ footer{
     font-family: 'Lexend Peta', sans-serif;
   }
   .title_footer p{  
-    line-height: 19px;
-    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
     padding: 0;
-    font-size: 12px;
-  }
+  } 
