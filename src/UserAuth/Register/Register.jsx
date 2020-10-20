@@ -20,7 +20,7 @@ function Register({history}) {
                         confirmPassword:'',
                     }
 
-    const errorData={  login: 'caracteres speciaux refuser',
+    const errorData={  login: '4 caracteres min speciaux, chiffres refuser',
                         email: 'Votre adresse mail n\'est pas valide',
                         password: 'Au moins: 1Min, 1Maj et 1chiffre' ,
                         confirmPassword: 'Au moins: 1 Min, 1 Maj et 1 chiffre'
@@ -55,7 +55,7 @@ function Register({history}) {
     const cleanedValue =(value,name)=> setData({...data, [name]: value })
 
     const dataSignUp = { email, password, returnSecureToken: true }
-    const userLogin ={ login }
+    const userLogin ={ login , email }
 
     const handleSubmit =(e)=>{
         e.preventDefault()
@@ -63,7 +63,6 @@ function Register({history}) {
         axios.post(`https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${FIREBASE_API_KEY}`,dataSignUp ).then((response)=>{
             
             const uid = response.data.localId
-            console.log(uid)
             axios.put(`https://hypertube-6cd18.firebaseio.com/users/${uid}.json`,userLogin)
 
             toast.info(`votre compte a bien étè creer ${login}`, {position: "top-center", autoClose: 3000, hideProgressBar: false,closeOnClick: true,pauseOnHover: false,progress: undefined});

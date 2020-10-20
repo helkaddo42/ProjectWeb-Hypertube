@@ -4,8 +4,10 @@ import Register from './UserAuth/Register/Register';
 import Login from './UserAuth/Login/Login';
 import ForgetPwd from './UserAuth/ForgetPwd/ForgetPwd';
 import Layout from './Layout/Layout'
-import Home from './Home/Home'
 import ErrorPage from './ErrorPage/ErrorPage'
+import Home from './Home/Home'
+import Logout from './UserAuth/Logout/Logout';
+import Profil from './Home/Profil/Profil';
 import {Route, BrowserRouter ,Switch, Redirect} from 'react-router-dom'
 
 
@@ -23,7 +25,9 @@ function App() {
   const registeredUser = <BrowserRouter >
                       <Layout>
                         <Switch>  
-                          <Route path='/Home' component={Home} />   
+                          <Route path='/Home' component={Home} /> 
+                          <Route path='/logout' component={Logout} />     
+                          <Route path='/Profil' component={Profil} />   
                           <Redirect to='/Home'/>
                         </Switch>
                       </Layout>

@@ -54,19 +54,18 @@ const handleSubmit =(e)=>{
         setLoginUser(user)
         toast.dark(`Bienvenue a toi ${user.toUpperCase()} :-)`, {position: "top-right",transition:Flip, autoClose: 3000, hideProgressBar: false,closeOnClick: true,pauseOnHover: false,progress: undefined});
         })
+
         setTimeout(() => {
-            history.push('/Home')
             window.location.reload()
-        }, 2000);
+        }, 3000);
+           
+        
         
     }).catch(()=>{
         toast.error("L'adresse email ou le mot de passe inconnu.", 
         {position: "top-right", autoClose: 3000, hideProgressBar: false,closeOnClick: true,pauseOnHover: false,progress: undefined});
     })
 }
-
-console.log('3',loginUser)
-
 
 const errorMessage = inputName &&  (<h3 style={{ color: 'red',fontStyle: 'italic'}}> {messageError[inputName]}</h3>)
 const btnDisplay = inputName === '' &&  email.length >= 7 && password.length >= 6 ? (<button className='finish'>Connexion</button>) : (<button disabled>Connexion</button>)
@@ -102,7 +101,7 @@ return (
 
 
                         <div className='linkContainer1'>
-                                <Link to='/Register' className='simpleLink1'> Revenir à la page précédente</Link>
+                                <Link to='/ForgetPwd' className='simpleLink1'> Mot de passe oublier ?</Link>
                         </div>
 
         </div>

@@ -1,11 +1,12 @@
 import React from 'react'
+import {NavLink} from 'react-router-dom';
 import './sideBar.css'
 
 function Sidebar() {
     return (
             <nav className='sideBar'>
                 <ul>
-                    <li> <a href='/'>Connexion</a> </li>
+                    <li> <NavLink to='./Profil'> Connexion </NavLink> </li>
                 </ul>
             </nav>
     )

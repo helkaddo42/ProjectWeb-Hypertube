@@ -1,0 +1,27 @@
+.blockBlueCard{
+    margin-top: 80px;
+    height: 35% ;
+    width: 95%;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    background-color: pink;
+}
+.contentCb{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.rccs__card--front, .rccs__card--back {
+    margin-top: 1rem;
+    width: 85%;
+    height: 85%;
+}
+.mui-formInputCartebleu{
+    width: 30%;
+}
