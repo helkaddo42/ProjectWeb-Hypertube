@@ -3,6 +3,7 @@ import ToggleButton from '../SideBar/ToggleButton'
 import PictureUser from '../../Picture/user.png'
 import {NavLink} from 'react-router-dom';
 import IconButton from '@material-ui/core/IconButton'
+import AccountCircle from '@material-ui/icons/AccountCircle'
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import './toolbar.css'
 
@@ -19,12 +20,14 @@ function Toolbar({openSide,close}) {
             </div>
             <div className='space'/>
             <div className='toolbar__items'>
-                <ul>
-                    <li> <NavLink to='./Profil'><img src={PictureUser} alt="userLogo"/></NavLink> </li>
+          
                     <IconButton>
-                        <li> <NavLink to='/logout'> <ExitToAppIcon/> </NavLink> </li>
+                        <NavLink to='./Profil' > <AccountCircle fontSize='large' className='icon'/></NavLink>
                     </IconButton>   
-                </ul>
+                    <IconButton>
+                        <NavLink to='/logout'> <ExitToAppIcon fontSize='large' className='icon'/> </NavLink>
+                    </IconButton>   
+              
             </div>   
 
         </nav>

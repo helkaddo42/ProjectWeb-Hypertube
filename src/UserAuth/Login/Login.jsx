@@ -98,7 +98,9 @@ return (
 
 
                     </form>
-
+                    <div className='linkContainer1'>
+                                <Link to='/Register' className='simpleLink1'> Pas encore isncrit ?</Link>
+                        </div>
 
                         <div className='linkContainer1'>
                                 <Link to='/ForgetPwd' className='simpleLink1'> Mot de passe oublier ?</Link>

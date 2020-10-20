@@ -12,8 +12,6 @@
   }
   /* Google font */
   @import url('https://fonts.googleapis.com/css2?family=Lexend+Peta&display=swap');
-  
-
 
 .toolbar{
     background-color:var(--dark-grey-color);
@@ -43,16 +41,17 @@
     font-family: 'Lexend Peta', sans-serif;
 
 }
-.toolbar__items ul{
-    margin-top: 10px;
-    margin-right: 10px;
+.toolbar__items {
+    display: flex;
+    flex-direction: row;
+    /* margin-top: 10px; */
     color:white;
     text-decoration: none;
     list-style: none;
 }
-.toolbar__items img{
-    height: 50px;
-    width: 50px;
+
+.icon {
+    color: white;
 }
 
 @media screen and (max-width: 1195px){

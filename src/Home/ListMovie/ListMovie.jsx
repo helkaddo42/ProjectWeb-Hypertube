@@ -12,8 +12,6 @@ function ListMovie() {
      })
     }, [])
 
-
-
     return (
         <div className='movieList'>
             

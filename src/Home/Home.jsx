@@ -11,10 +11,6 @@ function Home() {
                 <CarouselImg />
                 <SearchBar />
                 <ListMovie />
-
-
-               
-
         </div>
     )
 }
