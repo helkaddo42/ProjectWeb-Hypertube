@@ -1,0 +1,22 @@
+.mainCard{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cardMovie{
+    padding: 10px 10px;
+    width: 300px;
+    height: 450px;
+}
+
+.cardMovie:hover{
+    transition-duration: 0.5s;
+    transform: scale(1.2);
+    filter: brightness(1);
+    cursor: pointer;
+}
+
+
+
+

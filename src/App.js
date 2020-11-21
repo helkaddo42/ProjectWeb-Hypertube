@@ -4,12 +4,11 @@ import Register from './UserAuth/Register/Register';
 import Login from './UserAuth/Login/Login';
 import ForgetPwd from './UserAuth/ForgetPwd/ForgetPwd';
 import Layout from './Layout/Layout'
-import ErrorPage from './ErrorPage/ErrorPage'
 import Home from './Home/Home'
-import Logout from './UserAuth/Logout/Logout';
-import Profil from './Home/Profil/Profil';
+import Profil from './MyCompte/Profil/Profil';
+import Movie from './Movie/Movie';
 import {Route, BrowserRouter ,Switch, Redirect} from 'react-router-dom'
-
+import NewsLetter from './MyCompte/NewsLetter/NewsLetter';
 
 function App() {
   const allUser = <BrowserRouter >
@@ -18,7 +17,7 @@ function App() {
                             <Route exact path='/Register' component={Register} />
                             <Route path='/Login' component={Login} />
                             <Route path='/ForgetPwd' component={ForgetPwd} />
-                            <Route component={ErrorPage} />
+                            <Redirect to='/Login'/>
                           </Switch>
                     </BrowserRouter>
 
@@ -26,8 +25,9 @@ function App() {
                       <Layout>
                         <Switch>  
                           <Route path='/Home' component={Home} /> 
-                          <Route path='/logout' component={Logout} />     
-                          <Route path='/Profil' component={Profil} />   
+                          <Route path='/Profil/' component={Profil} />   
+                          <Route path='/Movie/:id' component={Movie} />   
+                          <Route path='/NewsLetter' component={NewsLetter} /> 
                           <Redirect to='/Home'/>
                         </Switch>
                       </Layout>
@@ -35,10 +35,6 @@ function App() {
 
 
   const access = localStorage.getItem('idToken') ? registeredUser : allUser
-
-
-
-
 
   return (
     <>

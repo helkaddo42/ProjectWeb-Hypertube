@@ -25,12 +25,11 @@ function Layout(props) {
     return (
         <div>
             <Toolbar openSide={displaySide} close={closeSide} />
-            {openSide}
-            {showBackdrop}
-            <main style={{marginTop:'58px'}}>
+                {openSide}
+                {showBackdrop}
+            <main style={{marginTop:'58px', backgroundColor:'black'}}>
                 {props.children}
             </main>
-            
         </div>
     )
 }

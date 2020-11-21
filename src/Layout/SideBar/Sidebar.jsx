@@ -6,7 +6,7 @@ function Sidebar() {
     return (
             <nav className='sideBar'>
                 <ul>
-                    <li> <NavLink to='./Profil'> Connexion </NavLink> </li>
+                    <li> <NavLink to='./Profil'> Profil </NavLink> </li>
                 </ul>
             </nav>
     )

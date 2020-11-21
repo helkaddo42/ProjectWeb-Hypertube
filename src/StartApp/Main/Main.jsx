@@ -9,7 +9,6 @@ function Main() {
         <div className='BgPicture'>
            <Link to='/register'><img src={startStream} alt=''></img></Link>   
         </div>
-
         </>
     )
 }

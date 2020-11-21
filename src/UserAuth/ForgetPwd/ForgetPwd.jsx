@@ -21,10 +21,9 @@ function ForgetPwd({history}) {
     useEffect(() => {if(email===''){setErrorRegex('')}},[email])
 
     const dataInput =(e)=>{
-        const valueInput = e.target.value
-        
-        valueInput.match(regex.email) ? setErrorRegex('') : setErrorRegex('error')
 
+        const valueInput = e.target.value
+        valueInput.match(regex.email) ? setErrorRegex('') : setErrorRegex('error')
         setEmail(valueInput)
     }
 
@@ -60,23 +59,14 @@ function ForgetPwd({history}) {
                     <h2>Mot de passe oublier ?</h2>
                         {errorMessage}
                         <form className='form_input2' onSubmit={handleSubmit}>
-    
                                 <div className='inputBox2'>
                                     <label>Email</label> <br/>
                                     <input id='email2' type='email'  minLength="7" maxLength="30"
                                     placeholder='indiquer votre email'
                                     onChange={dataInput}></input>
                                 </div>
-
                                 {btnDisplay}
-
                         </form>
-{/* 
-                        <div className='linkContainer2'>
-                                <Link to='/Login' className='simpleLink2'>Revenir à la page précédente</Link>
-                        </div> */}
-
-    
     
             </div>
         </div> 

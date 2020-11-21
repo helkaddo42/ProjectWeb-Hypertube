@@ -1,20 +1,11 @@
-import React,{useEffect} from 'react'
-import axios from 'axios'
+import React from 'react'
+import MovieCard from './movieCard/MovieCard'
 import './listMovie.css'
 
-function ListMovie() {
-
-    useEffect(() => {
-     axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=80293e0217053d0767442c692293745b&language=fr&page=1&include_adult=false`).then((response)=>
-        { console.log(response)}
-     ).catch(err =>{
-         console.log(err)
-     })
-    }, [])
-
+function ListMovie({history,idMovie,searchMovie}) {
     return (
         <div className='movieList'>
-            
+            <MovieCard search={searchMovie} idGenre={idMovie} redirect={history} />
         </div>
     )
 }

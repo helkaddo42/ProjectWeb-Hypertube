@@ -9,7 +9,7 @@ import  './login.css'
 
 toast.configure();
 
-function Login({history}) {
+function Login() {
 
     const FIREBASE_API_KEY = process.env.REACT_APP_FIREBASE_API_KEY
 
@@ -19,10 +19,12 @@ function Login({history}) {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [inputName, setInputName] = useState('')
-    const [loginUser, setLoginUser] = useState('')
 
     useEffect(() => {
-       if(email === '' && password === ''){setInputName('')}
+        if(email === '' && password === ''){
+           setInputName('')
+        }
+        
         
     }, [email,password])
 
@@ -30,9 +32,7 @@ const dataInput =(e)=>{
     
     const valueInput = e.target.value
     const nameInput = e.target.id
-
     valueInput.match(regex[nameInput]) ? setInputName('') : setInputName(nameInput)
-    
     cleanedValue(valueInput, nameInput)
 }
 
@@ -43,21 +43,17 @@ const dataSignIn = { email, password, returnSecureToken: true }
 const handleSubmit =(e)=>{
     e.preventDefault()
 
-    axios.post(`https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${FIREBASE_API_KEY}`, dataSignIn).then((response)=>{
-
+    axios.post(`https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${FIREBASE_API_KEY}`, dataSignIn)
+    .then((response)=>{
         localStorage.setItem('idToken',response.data.idToken)
         localStorage.setItem('localId',response.data.localId)
         const uid = response.data.localId
-
-        axios.get(`https://hypertube-6cd18.firebaseio.com/users/${uid}.json`).then(infoUser =>{
-        const user = infoUser.data.login
-        setLoginUser(user)
-        toast.dark(`Bienvenue a toi ${user.toUpperCase()} :-)`, {position: "top-right",transition:Flip, autoClose: 3000, hideProgressBar: false,closeOnClick: true,pauseOnHover: false,progress: undefined});
-        })
+        axios.get(`https://hypertube-6cd18.firebaseio.com/${uid}/users.json`).then(infoUser =>{
+        toast.dark(`Bienvenue a toi ${infoUser.data.login} :-)`, {position: "top-right",transition:Flip, autoClose: 3000, hideProgressBar: false,closeOnClick: true,pauseOnHover: false,progress: undefined});})
 
         setTimeout(() => {
             window.location.reload()
-        }, 3000);
+        }, 1000);
            
         
         
@@ -78,7 +74,7 @@ return (
         <div className='form_right1'>
         <div className='returnSignIn'> <Link to='/ForgetPwd'>  <img src={pwd} alt=""/>  </Link> </div>
 
-                <h2>Connexion</h2>
+                    <h2>Connexion</h2>
                     <form className='form_input1' onSubmit={handleSubmit}>
                             {errorMessage}
                             <div className='inputBox1'>
@@ -96,15 +92,14 @@ return (
 
                             { btnDisplay }
 
-
                     </form>
                     <div className='linkContainer1'>
-                                <Link to='/Register' className='simpleLink1'> Pas encore isncrit ?</Link>
-                        </div>
+                            <Link to='/Register' className='simpleLink1'> Pas encore isncrit ?</Link>
+                    </div>
 
-                        <div className='linkContainer1'>
-                                <Link to='/ForgetPwd' className='simpleLink1'> Mot de passe oublier ?</Link>
-                        </div>
+                    <div className='linkContainer1'>
+                             <Link to='/ForgetPwd' className='simpleLink1'> Mot de passe oublier ?</Link>
+                    </div>
 
         </div>
     </div> 

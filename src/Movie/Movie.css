@@ -1,0 +1,60 @@
+.Page {
+    width: 100%;
+    color: white;
+    font-family: PT Sans,sans-serif;
+}
+
+.Container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: rgba(0,0,0, 0.7);
+    min-height: 100vh;
+}
+
+.TitreMovie {
+    color: #96A5B1;
+    font-family: 'Oswald';
+    margin: 0;
+}
+
+.LuMovie {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.LiMovie {
+    margin-top: 3px;
+    text-align: center;
+    border: 1px solid snow;
+    border-radius: 5px;
+    padding: 3px;
+    background-color: grey;
+    list-style: none;
+}
+
+.BandeAnnonce {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.Icons {
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.Fav,
+.Vu {
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+}
+
+.Fav:hover {
+    color: red;
+}
+
+.Vu:hover {
+    color: rgb(9, 163, 251);
+}

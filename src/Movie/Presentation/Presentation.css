@@ -1,0 +1,13 @@
+.ProgressBar {
+    height: 100px;
+}
+
+@media (max-width: 790px) {
+    .TitreMovie2, .TaglineMovie2 {
+        text-align: center;
+        
+    }
+    .TaglineMovie2 {
+        margin-bottom: 40px;
+    }
+}

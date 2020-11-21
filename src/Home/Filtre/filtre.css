@@ -1,0 +1,48 @@
+.filtre{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 20px;
+    height: fit-content;
+}
+
+.ulGenre{
+    padding: 0;
+    flex-wrap: wrap;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.liGenre{
+    color: #5a606b;
+    border: 1px solid #5a606b;
+    margin-bottom: 10px;
+    border-radius: 25px;
+    font-weight: 500px;
+    padding: 10px 10px;
+    margin: 10px 20px 10px 10px;
+    cursor: pointer;
+}
+.liGenre:active {
+    color: rgb(0, 255, 128);
+}
+.liGenre:hover{
+    color: #ffffff;
+    border-color: #ffffff;
+    background-color: transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 700px){
+    .liGenre{
+    padding: 5px 5px;
+    margin: 5px 5px 5px 5px;
+    font-size: 10px;
+    cursor: pointer;
+    }
+    .filtre{
+        margin-top: 20px;
+    }
+} 

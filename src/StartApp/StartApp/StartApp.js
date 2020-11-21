@@ -5,11 +5,11 @@ import Main  from '../Main/Main'
 
 function StartApp() {
     return (
-        <div>
+        <>
             <Header />
             <Main />
             <Footer />
-        </div>
+        </>
     )
 }
 

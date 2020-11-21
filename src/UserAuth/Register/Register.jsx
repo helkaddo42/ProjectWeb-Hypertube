@@ -13,6 +13,7 @@ toast.configure();
 function Register({history}) {
 
     const FIREBASE_API_KEY = process.env.REACT_APP_FIREBASE_API_KEY
+    console.log(FIREBASE_API_KEY)
 
     const storeData={   login:'',
                         email:'',
@@ -60,10 +61,10 @@ function Register({history}) {
     const handleSubmit =(e)=>{
         e.preventDefault()
 
-        axios.post(`https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${FIREBASE_API_KEY}`,dataSignUp ).then((response)=>{
+        axios.post(`https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${FIREBASE_API_KEY}`,dataSignUp).then((response)=>{
             
             const uid = response.data.localId
-            axios.put(`https://hypertube-6cd18.firebaseio.com/users/${uid}.json`,userLogin)
+            axios.put(`https://hypertube-6cd18.firebaseio.com/${uid}/users.json/`,userLogin)
 
             toast.info(`votre compte a bien étè creer ${login}`, {position: "top-center", autoClose: 3000, hideProgressBar: false,closeOnClick: true,pauseOnHover: false,progress: undefined});
             setTimeout(() => { history.push('/Login') }, 2000);

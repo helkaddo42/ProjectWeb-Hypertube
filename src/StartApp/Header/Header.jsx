@@ -4,9 +4,9 @@ import  './header.css'
 
 function Header() {
     return (
-            <header >
-                <div className='title'>
-                    <NavLink to='/Register'> <h2> Hypertube </h2></NavLink>
+            <header>
+                <div className='header_title'>
+                    <NavLink to='/Home'> <h2> Hypertube </h2></NavLink>
                 </div> 
             </header>
             

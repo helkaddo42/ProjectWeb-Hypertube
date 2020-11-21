@@ -11,9 +11,7 @@
   --deep-black-color: #000000;
 }
 
-
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Peta&display=swap');
-
 
 .errorPage {
   box-shadow: inset 0px 143px 108px -18px rgba(0, 0, 0, 0.89);
@@ -21,20 +19,20 @@
   justify-content: center;
   height: 100vh;
   background-color:var(--dark-grey-color);
-  }
+}
 
 .container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex: 0 1 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 1 80%;
 }
 
 .titre h2{
-    text-align: center;
-    font-family: 'Lexend Peta', sans-serif;
-    color: #EAE8E8;
-    flex-wrap: wrap;
+  text-align: center;
+  font-family: 'Lexend Peta', sans-serif;
+  color: #EAE8E8;
+  flex-wrap: wrap;
 }
 
 .Img{
@@ -46,8 +44,8 @@
   width: 100%;
   flex-basis: 80%;
   border-radius: 100px;
-
 }
+
 .Btn{
   padding-top: 3%;
   display: flex;

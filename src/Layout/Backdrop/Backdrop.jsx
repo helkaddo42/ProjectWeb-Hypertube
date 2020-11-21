@@ -3,9 +3,8 @@ import './backdrop.css'
 
 function Backdrop({close}) {
     return (
-        <div className='backDrop' onClick={close}>
-            
-        </div>
+        <div className='backDrop' onClick={close}></div>
+        
     )
 }
 

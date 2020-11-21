@@ -1,0 +1,37 @@
+.containerProfil{
+    display: flex;
+    min-height: 125vh;
+    background-color: #fff;
+}
+
+.leftContainer{
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #363636; ;
+    min-height: 150vh;
+}
+
+.leftContainer p {
+    padding: 20px;
+    font-weight: bold;
+}
+
+.rightContainer{
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rightContainer h3{
+    padding: 10px;
+}
+
+@media (max-width:400px){
+    .leftContainer{
+        height: 310vh;
+        width: 25%;
+    }
+}

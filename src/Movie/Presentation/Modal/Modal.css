@@ -1,0 +1,13 @@
+.Modal {
+    background-color: rgba(34, 43, 49, 0.9);
+}
+
+.modal-content {
+    background-color: rgba(34, 43, 49);
+    color: white;
+}
+
+.close,
+.close:hover {
+    color:white;
+}
