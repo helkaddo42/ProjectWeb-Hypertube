@@ -21,10 +21,15 @@ function InfoUser() {
             setIdToken(localStorage.getItem('idToken'))
             axios.get(`https://hypertube-6cd18.firebaseio.com/${localStorage.getItem('localId')}/users.json`)
             .then(response =>{
-                setFirstName(response.data.firstName);
-                setLastName(response.data.lastName);
-                setLogin(response.data.login);
-                setEmail(response.data.email)
+                if(response.data){
+                    setFirstName(response.data.firstName);
+                    setLastName(response.data.lastName);
+                    setLogin(response.data.login);
+                    setEmail(response.data.email)
+                }else{
+                    console.log('pas de donner')
+                }
+              
             })
         }, [])
 

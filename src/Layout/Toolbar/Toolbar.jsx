@@ -10,6 +10,10 @@ function Toolbar(props) {
 
     const {openSide,close} = props
 
+    const exit =()=>{
+        localStorage.clear()
+        window.location.reload()
+    }
 
     return (
     <header className='toolbar'>
@@ -25,7 +29,7 @@ function Toolbar(props) {
                         <NavLink to='/Profil'> <AccountCircle  fontSize='large' className='icon'/></NavLink>
                     </IconButton>   
                     <IconButton>
-                        <NavLink to='/Logout' > <ExitToAppIcon  fontSize='large' className='icon'/> </NavLink>
+                        <NavLink to='/Logout' onClick={exit} > <ExitToAppIcon  fontSize='large' className='icon'/> </NavLink>
                     </IconButton>   
             </div>   
 
