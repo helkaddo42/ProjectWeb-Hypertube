@@ -9,7 +9,7 @@ toast.configure();
 
 function DeleteAccount() {
 
-    const FIREBASE_API_KEY = process.env.REACT_APP_FIREBASE_API_KEY
+    const FIREBASE_API_KEY = 'AIzaSyCO-8B9Zx0Mdwpa7oyA6QWgD5m7bXdNGs4'
 
     const submit =()=>{
 

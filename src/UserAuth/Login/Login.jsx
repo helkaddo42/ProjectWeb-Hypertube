@@ -11,7 +11,7 @@ toast.configure();
 
 function Login() {
 
-    const FIREBASE_API_KEY = process.env.REACT_APP_FIREBASE_API_KEY
+    const FIREBASE_API_KEY = 'AIzaSyCO-8B9Zx0Mdwpa7oyA6QWgD5m7bXdNGs4'
 
     const errorData ={ email: 'Votre adresse mail n\'est pas valide', password: 'Au moins: 1Min, 1Maj et 1chiffre'}
 

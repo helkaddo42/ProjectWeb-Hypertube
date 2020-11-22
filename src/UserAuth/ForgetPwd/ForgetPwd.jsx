@@ -12,7 +12,7 @@ toast.configure();
 function ForgetPwd({history}) {
 
 
-    const FIREBASE_API_KEY = process.env.REACT_APP_FIREBASE_API_KEY
+    const FIREBASE_API_KEY = 'AIzaSyCO-8B9Zx0Mdwpa7oyA6QWgD5m7bXdNGs4'
 
     const [messageError] = useState("Votre adresse mail n'est pas valide")
     const [email, setEmail] = useState('')
