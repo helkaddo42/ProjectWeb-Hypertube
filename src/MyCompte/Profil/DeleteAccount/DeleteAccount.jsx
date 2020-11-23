@@ -18,7 +18,10 @@ function DeleteAccount() {
         .then(res=>{
             toast.dark(`Bonne continuation :-(`, {position: "top-right",transition:Flip, autoClose: 3000, hideProgressBar: false,closeOnClick: true,pauseOnHover: false,progress: undefined});
             localStorage.clear()
-            window.location.reload()
+            setTimeout(() => {
+                window.location.reload()
+            }, 2500);
+            
         }).catch(err=>{
             console.log(err)
         })

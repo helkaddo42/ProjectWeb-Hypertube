@@ -6,6 +6,7 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css' 
 import ImgSignIn from '../../Picture/connexion.png'
 import './register.css'
+import { ControlPointDuplicateOutlined } from '@material-ui/icons';
 
 toast.configure();
 
@@ -21,7 +22,7 @@ function Register({history}) {
                         confirmPassword:'',
                     }
 
-    const errorData={  login: '4 caracteres min speciaux, chiffres refuser',
+    const errorData={   login: '3 caracteres min speciaux, chiffres refuser',
                         email: 'Votre adresse mail n\'est pas valide',
                         password: 'Au moins: 1Min, 1Maj et 1chiffre' ,
                         confirmPassword: 'Au moins: 1 Min, 1 Maj et 1 chiffre'
@@ -49,7 +50,6 @@ function Register({history}) {
         const nameInput = e.target.id
 
         valueInput.match(regex[nameInput]) ? setInputName('') : setInputName(nameInput)
-        
         cleanedValue(valueInput, nameInput)
     }
 
@@ -77,7 +77,7 @@ function Register({history}) {
 
     const errorMessage = inputName &&  (<p style={{ color: 'red',fontStyle: 'italic'}}> {messageError[inputName]}</p>)
     const messageMatchPwd = matchPwd &&  (<p style={{ color: '#0000FF',fontStyle: 'italic'}}>Les mots de passes doivent etre identique !</p>)
-    const btnDisplay = inputName === '' && password === confirmPassword && login.length >= 4 && email.length >= 7 && password.length >= 6 && confirmPassword.length >= 6 ? 
+    const btnDisplay = inputName === '' && password === confirmPassword && login.length >= 3 && email.length >= 7 && password.length >= 6 && confirmPassword.length >= 6 ? 
     (<button className='submit'>Inscription</button>) : (<button disabled>Inscription</button>)
 
 return (
@@ -96,7 +96,7 @@ return (
                                 <label>Login</label> <br/>
                                 <input id='login' type='text' 
                                  minLength='4' maxLength='8'
-                                 placeholder='contient au moins 4 caractéres'
+                                 placeholder='contient au moins 3 caractéres'
                                 onChange={dataInput}/>
                                 
                             </div>
