@@ -1,13 +1,13 @@
-# Hypertube
+## Hypertube
 - Authentification.
 - Home (Liste de film).
 - Movie (details du film).
 - Partie Profil.
 
-## Pour lancer l'application
+### Pour lancer l'application
 `cd Front && npm i && npm start`  
 
-## Technologies utilisées
+### Technologies utilisées
 * React
 * Hooks
 * Firebase
