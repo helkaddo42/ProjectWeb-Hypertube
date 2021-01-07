@@ -96,7 +96,7 @@ return (
                                 <label>Login</label> <br/>
                                 <input id='login' type='text' 
                                  minLength='4' maxLength='8'
-                                 placeholder='contient au moins 3 caractéres'
+                                 placeholder='contient au moins 4 caractéres'
                                 onChange={dataInput}/>
                                 
                             </div>
